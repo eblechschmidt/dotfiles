@@ -1,4 +1,4 @@
-require "user.options"
-require "user.keymaps"
-require "user.plugins"
-require "user.telescope"
+require "eike.options"
+require "eike.keymaps"
+require "eike.plugins"
+require "eike.telescope"
