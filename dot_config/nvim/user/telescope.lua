@@ -3,6 +3,9 @@ if not status_ok then
   return
 end
 
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>f', builtin.find_files, {})
+
 local actions = require "telescope.actions"
 
 telescope.setup {
@@ -19,6 +22,7 @@ telescope.setup {
 
         ["<C-j>"] = actions.move_selection_next,
         ["<C-k>"] = actions.move_selection_previous,
+        ["<C-l>"] = actions.select_default,
 
         ["<C-c>"] = actions.close,
 
@@ -40,8 +44,8 @@ telescope.setup {
         ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
         ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
         ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
-        ["<C-l>"] = actions.complete_tag,
-        ["<C-_>"] = actions.which_key, -- keys from pressing <C-/>
+        -- ["<C-l>"] = actions.complete_tag,
+        ["<C-h>"] = actions.which_key, -- keys from pressing <C-/>
       },
 
       n = {
@@ -94,3 +98,4 @@ telescope.setup {
     -- please take a look at the readme of the extension you want to configure
   },
 }
+
