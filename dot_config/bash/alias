@@ -1,0 +1,15 @@
+# vi/vim/nvim
+alias vi="nvim"
+alias vim="nvim"
+
+# git
+alias ga="git add"
+alias gc="git commit -m"
+alias gs="git status"
+alias gsv="git status -verbose":
+alias gd="git diff"
+alias gp="git push"
+
+# chezmoid
+alias cm="chezmoi"
+alias cmr="chezmoi re-add"

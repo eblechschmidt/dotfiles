@@ -1,0 +1,8 @@
+
+
+# local utility functions 
+_have()      { type "$1" &>/dev/null; }
+_source_if() { [[ -r "$1" ]] && source "$1"; }
+
+# source different files
+_source_if "$HOME/.config/bash/alias"
