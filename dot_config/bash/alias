@@ -22,3 +22,6 @@ alias ll="ls -lAh"
 
 # bash
 alias :wq="exit"
+
+# ansible
+alias ap="ansible-playbook -K"
