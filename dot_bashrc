@@ -6,3 +6,7 @@ _source_if() { [[ -r "$1" ]] && source "$1"; }
 
 # source different files
 _source_if "$HOME/.config/bash/alias"
+_source_if "$HOME/.config/bash/cd"
+
+# theming
+# test -r ~/.config/bash/dir_colors && eval $(dircolors ~/.config/bash/.dir_colors)
