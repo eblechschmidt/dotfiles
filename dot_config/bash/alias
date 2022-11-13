@@ -15,11 +15,17 @@ alias cm="chezmoi"
 alias cmr="chezmoi re-add"
 alias cmcd="chezmoi cd"
 
-# ls
-alias ls="ls --color=auto"
-alias la="ls -A"
-alias ll="ls -lAh"
-
+# ls or exa
+if _have exa; then
+  alias ls="exa --color=always --group-directories-first --icons"
+  alias la="exa -a --color=always --group-directories-first --icons"
+  alias ll="exa -lah --color=always --group-directories-first --icons"
+  alias lt='exa -aT --color=always --group-directories-first --icons'
+else
+  alias ls="ls --color=auto"
+  alias la="ls -A"
+  alias ll="ls -lAh"
+fi
 # bash
 alias :wq="exit"
 
