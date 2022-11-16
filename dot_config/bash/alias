@@ -6,7 +6,7 @@ alias vim="nvim"
 alias ga="git add"
 alias gc="git commit -m"
 alias gs="git status"
-alias gsv="git status -v"
+alias gsv="git -c color.status=always -c color.diff=always status -v | less -R"
 alias gd="git diff"
 alias gp="git push"
 
