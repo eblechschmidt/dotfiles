@@ -1,6 +1,7 @@
 {{ if eq .chezmoi.os "darwin" }}
 set -g default-shell /usr/local/bin/bash
 {{end}}
+set -g default-terminal "screen-256color"
 
 # manual tmux settings must be set befor loading the theme
 set-option -g status-position top
