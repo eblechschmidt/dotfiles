@@ -1,0 +1,5 @@
+{{ if eq .chezmoi.os "darwin" }}
+.bash_profile
+{{end}}
+LICENSE
+README.md
