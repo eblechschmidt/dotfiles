@@ -2,6 +2,9 @@
 alias vi="nvim"
 alias vim="nvim"
 
+# mkdir
+alias mkdir="mkdir -p"
+
 # git
 alias ga="git add"
 alias gc="git commit -m"

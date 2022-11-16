@@ -12,3 +12,6 @@ _source_if "$HOME/.config/bash/fzf"
 
 # theming
 test -r ~/.config/bash/dir_colors && eval $(gdircolors ~/.config/bash/dir_colors)
+
+# oh-my-posh
+eval "$(oh-my-posh init bash)"
