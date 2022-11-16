@@ -1,7 +1,10 @@
 {{ if eq .chezmoi.os "darwin" }}
 set -g default-shell /usr/local/bin/bash
 {{end}}
-set -g default-terminal "screen-256color"
+
+# this needs to be set in order to work properly with alacritty
+set -g default-terminal "alacritty"
+set -ag terminal-overrides ",alacritty:RGB"
 
 # manual tmux settings must be set befor loading the theme
 set-option -g status-position top
