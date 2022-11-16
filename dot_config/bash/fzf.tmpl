@@ -7,3 +7,5 @@ export FZF_DEFAULT_OPTS='--color=bg+:#3B4252,spinner:#81A1C1,hl:#616E88,fg:#D8DE
 # this workaround is needed so fzf uses the above colors.
 # it does not seem to work with tmuxes TERM=screen-256color
 alias fzf="TERM=screen fzf"
+
+export FZF_DEFAULT_COMMAND='fd --type f'
