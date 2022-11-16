@@ -480,6 +480,8 @@ shell:
   program: /usr/local/bin/bash
   args:
     - --login
+    - -c
+    - "tmux attach || tmux"
 
 # Startup directory
 #
@@ -789,7 +791,8 @@ shell:
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
 {{ if eq .chezmoi.os "darwin" }}
-# these keybindings are only needed when on macOS
+# These keybindings are only needed when on macOS
+# Mac os keybindings can be determined using `xxd -psd`
 key_bindings:
   - { key: 28,      mods: Alt, chars: "{" }
   - { key: 25,      mods: Alt, chars: "}" }
@@ -800,6 +803,28 @@ key_bindings:
   - { key: 23,      mods: Alt, chars: "[" }
   - { key: 22,      mods: Alt, chars: "]" }
   - { key: 19,      mods: Shift, chars: "\""}
+  # Create a new tmux window
+  - { key: T, mods: Command, chars: "\x02\x63" }
+  # Select window 1-9
+  - { key: Key1, mods: Command, chars: "\x02\x30" }
+  - { key: Key2, mods: Command, chars: "\x02\x31" }
+  - { key: Key3, mods: Command, chars: "\x02\x32" }
+  - { key: Key4, mods: Command, chars: "\x02\x33" }
+  - { key: Key5, mods: Command, chars: "\x02\x34" }
+  - { key: Key6, mods: Command, chars: "\x02\x35" }
+  - { key: Key7, mods: Command, chars: "\x02\x36" }
+  - { key: Key8, mods: Command, chars: "\x02\x37" }
+  - { key: Key9, mods: Command, chars: "\x02\x38" }
+  # Detach the current tmux client
+  - { key: Q, mods: Command, chars: "\x02\x64" }
+  # Kill the current tmux pane (and window if last pane)
+  - { key: W, mods: Command, chars: "\x02\x78" }
+  # Rename the current tmux window
+  - { key: R, mods: Command, chars: "\x02\x2c" }
+  # Change to the next tmux window
+  - { key: K, mods: Command, chars: "\x02\x6e" }
+  # Change to the previous tmux window
+  - { key: J, mods: Command, chars: "\x02\x70" }
 {{end}}
   #- { key: Paste,                                       action: Paste          }
   #- { key: Copy,                                        action: Copy           }
