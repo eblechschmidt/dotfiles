@@ -3,19 +3,40 @@ $schema: https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes
 blocks:
     - alignment: left
       segments:
-        - background: '#3b4252'
+        - background: '#88c0d0'
+          foreground: '#2e3440'
+          properties:
+            branch_icon: ""
+            fetch_upstream_icon: true
+          style: diamond 
+          template: " \uf1d2 {{ .RepoName }}"
+          type: git
+          powerline_symbol: "\ue0b0"
+        - background: '#a3be8c'
+          foreground: '#2e3440'
+          properties:
+            branch_icon: ""
+            branch_max_length: 25
+            fetch_stash_count: true
+            fetch_status: true
+            fetch_upstream_icon: true
+          style: powerline
+          powerline_symbol: "\ue0b0"
+          background_templates:
+            - "{{ if or (.Working.Changed) (.Staging.Changed) }}#bf616a{{ end }}"
+            - "{{ if or (gt .Behind 0) (gt .Ahead 0)}}#ebcb8b{{ end }}"
+          foreground_templates:
+            - "{{ if or (.Working.Changed) (.Staging.Changed) }}#e5e9f0{{ end }}"
+          template: " {{ .HEAD }}"
+          type: git
+        - background: '#5e81ac'
           foreground: '#e5e9f0'
           properties:
             style: folder
-          style: powerline 
-          template: ' {{ .Path }} '
+          style: powerline
+          powerline_symbol: "\ue0b0"
+          template: ' {{ .Path }}/ '
           type: path
-        - foreground: '#D0666F'
-          properties:
-            branch_icon: ""
-          style: plain
-          template: <#5FAAE8>git:(</>{{ .HEAD }}<#5FAAE8>)</>
-          type: git
         - foreground: '#BF616A'
           style: plain
           template: ' ✗'
