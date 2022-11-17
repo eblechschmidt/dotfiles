@@ -8,7 +8,7 @@ blocks:
           properties:
             branch_icon: ""
             fetch_upstream_icon: true
-          style: diamond 
+          style: powerline
           template: " \uf1d2 {{ .RepoName }}"
           type: git
         - background: 'green'
