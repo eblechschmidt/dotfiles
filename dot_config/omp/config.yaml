@@ -9,7 +9,7 @@ blocks:
             branch_icon: ""
             fetch_upstream_icon: true
           style: powerline
-          template: " \uf1d2 {{ .RepoName }}"
+          template: " \uf1d2 {{ .RepoName }} "
           type: git
         - background: 'green'
           foreground: 'black'
@@ -26,16 +26,19 @@ blocks:
             - "{{ if or (gt .Behind 0) (gt .Ahead 0)}}yellow{{ end }}"
           foreground_templates:
             - "{{ if or (.Working.Changed) (.Staging.Changed) }}white{{ end }}"
-          template: " {{ .HEAD }}"
+          template: " {{ .HEAD }} "
           type: git
         - background: 'blue'
           foreground: '#e5e9f0'
           properties:
-            style: folder
+            style: agnoster_full 
           style: powerline 
           powerline_symbol: "\ue0b0"
-          template: ' {{ .Path }}/ '
+          template: " {{ .Path }} "
           type: path
+          mapped_locations:
+            "~/repos/": "$"
+          mapped_locations_enabled: true
         - foreground: '#BF616A'
           style: plain
           template: ' ✗'
