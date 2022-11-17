@@ -3,37 +3,36 @@ $schema: https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes
 blocks:
     - alignment: left
       segments:
-        - background: '#88c0d0'
-          foreground: '#2e3440'
+        - background: '#4c566a'
+          foreground: 'white'
           properties:
             branch_icon: ""
             fetch_upstream_icon: true
           style: diamond 
           template: " \uf1d2 {{ .RepoName }}"
           type: git
-          powerline_symbol: "\ue0b0"
-        - background: '#a3be8c'
-          foreground: '#2e3440'
+        - background: 'green'
+          foreground: 'black'
           properties:
             branch_icon: ""
             branch_max_length: 25
             fetch_stash_count: true
             fetch_status: true
             fetch_upstream_icon: true
-          style: powerline
+          style: powerline 
           powerline_symbol: "\ue0b0"
           background_templates:
-            - "{{ if or (.Working.Changed) (.Staging.Changed) }}#bf616a{{ end }}"
-            - "{{ if or (gt .Behind 0) (gt .Ahead 0)}}#ebcb8b{{ end }}"
+            - "{{ if or (.Working.Changed) (.Staging.Changed) }}red{{ end }}"
+            - "{{ if or (gt .Behind 0) (gt .Ahead 0)}}yellow{{ end }}"
           foreground_templates:
-            - "{{ if or (.Working.Changed) (.Staging.Changed) }}#e5e9f0{{ end }}"
+            - "{{ if or (.Working.Changed) (.Staging.Changed) }}white{{ end }}"
           template: " {{ .HEAD }}"
           type: git
-        - background: '#5e81ac'
+        - background: 'blue'
           foreground: '#e5e9f0'
           properties:
             style: folder
-          style: powerline
+          style: powerline 
           powerline_symbol: "\ue0b0"
           template: ' {{ .Path }}/ '
           type: path
