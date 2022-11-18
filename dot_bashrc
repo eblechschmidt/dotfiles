@@ -15,4 +15,7 @@ test -r ~/.config/bash/dir_colors && eval $(gdircolors ~/.config/bash/dir_colors
 
 # oh-my-posh
 _have oh-my-posh && eval "$(oh-my-posh init bash  --config ~/.config/omp/config.yaml)"
-# eval "$(oh-my-posh init bash --config $(brew --prefix oh-my-posh)/themes/robbyrussel.omp.json)"
+
+# "bat" as manpager
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
