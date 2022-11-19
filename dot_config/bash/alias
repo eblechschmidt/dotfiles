@@ -35,3 +35,5 @@ alias :wq="exit"
 # ansible
 alias ap="ansible-playbook -K"
 
+# bat
+alias bat="bat --theme=Nord"
