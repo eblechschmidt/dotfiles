@@ -1,0 +1,8 @@
+export HISTFILESIZE=
+export HISTSIZE=
+HISTCONTROL=ignoredups:erasedups
+shopt -s histappend
+# add command to history after each execution so it is saved no matter what
+# terminal is closed last
+PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
+
