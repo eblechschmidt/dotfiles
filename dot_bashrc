@@ -19,6 +19,8 @@ _have oh-my-posh && eval "$(oh-my-posh init bash  --config ~/.config/omp/config.
 
 # "bat" as manpager
 export MANPAGER="sh -c 'col -bx | bat --theme=Nord -l man -p'"
+export XDG_CONFIG_HOME="$HOME/.config"
+export EDITOR="nvim"
 
 ### SHOPT
 shopt -s autocd # change to named directory
@@ -27,3 +29,6 @@ shopt -s cmdhist # save multi-line commands in history as single line
 shopt -s dotglob
 shopt -s histappend # do not overwrite history
 shopt -s checkwinsize # checks term size when bash regains control
+shopt -s globstar
+shopt -s dotglob
+
