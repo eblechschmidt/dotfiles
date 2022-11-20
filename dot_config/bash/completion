@@ -1,7 +1,14 @@
 # git -> download from https://github.com/git/git/blob/master/contrib/completion/git-completion.bash
 _source_if "$HOME/.config/bash/git-completion"
 
+# add completion for chezmoi and also for alias cm
 _have chezmoi && . <(chezmoi completion bash)
+if [[ $(type -t compopt) = "builtin" ]]; then
+  complete -o default -F __start_chezmoi cm
+else
+  complete -o default -o nospace -F __start_chezmoi cm
+fi
+
 _have gh && . <(gh completion -s bash)
 
 # ansible
