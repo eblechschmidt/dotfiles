@@ -32,3 +32,4 @@ shopt -s checkwinsize # checks term size when bash regains control
 shopt -s globstar
 shopt -s dotglob
 
+stty stop undef # disable control-s accidental terminal stops
