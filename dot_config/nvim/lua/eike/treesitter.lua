@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 configs.setup {
-  ensure_installed = {"lua", "go", "gomod", "gowork", "yaml", "bash", 
+  ensure_installed = {"help", "lua", "go", "gomod", "gowork", "yaml", "bash", 
     "dockerfile", "gitattributes", "gitcommit", "gitignore", "html", "jq",
     "json", "json5", "markdown", "markdown_inline", "python", "sql", "svelte", 
     "toml"}, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
