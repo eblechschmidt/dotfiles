@@ -49,8 +49,9 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope.nvim"
   -- Show keys
   use "folke/which-key.nvim"
-  -- Nice status line
+  -- Nice status lines
   use "nvim-lualine/lualine.nvim"
+  use "akinsho/bufferline.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
