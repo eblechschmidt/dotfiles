@@ -52,6 +52,14 @@ return packer.startup(function(use)
   -- Nice status lines
   use "nvim-lualine/lualine.nvim"
   use "akinsho/bufferline.nvim"
+  
+  -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+  use "JoosepAlviste/nvim-ts-context-commentstring"
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
