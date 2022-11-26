@@ -44,12 +44,13 @@ return packer.startup(function(use)
   -- My plugins here
   use "arcticicestudio/nord-vim"  -- Nord theme for nvim
   use "wbthomason/packer.nvim"    -- Have packer manage itself
-
   -- Telescope
   use "nvim-lua/plenary.nvim"
   use "nvim-telescope/telescope.nvim"
   -- Show keys
   use "folke/which-key.nvim"
+  -- Nice status line
+  use "nvim-lualine/lualine.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
