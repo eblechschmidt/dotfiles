@@ -41,9 +41,11 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-  -- My plugins here
+  -- misc
   use "arcticicestudio/nord-vim"  -- Nord theme for nvim
   use "wbthomason/packer.nvim"    -- Have packer manage itself
+  use "windwp/nvim-autopairs"     -- Autopairs (e.g. brackets) for both cmp and treesitter
+
   -- Telescope
   use "nvim-lua/plenary.nvim"
   use "nvim-telescope/telescope.nvim"
