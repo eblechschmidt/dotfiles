@@ -45,7 +45,8 @@ return packer.startup(function(use)
   use "arcticicestudio/nord-vim"  -- Nord theme for nvim
   use "wbthomason/packer.nvim"    -- Have packer manage itself
   use "windwp/nvim-autopairs"     -- Autopairs (e.g. brackets) for both cmp and treesitter
-  use "akinsho/toggleterm.nvim"
+  use "akinsho/toggleterm.nvim"   -- Toggles terminal
+  use "numToStr/Comment.nvim"     -- Easily comment stuff
   -- Telescope
   use "nvim-lua/plenary.nvim"
   use "nvim-telescope/telescope.nvim"
