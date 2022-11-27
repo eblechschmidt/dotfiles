@@ -7,6 +7,6 @@ end
 require "eike.lsp.lsp-installer"
 require("eike.lsp.handlers").setup()
 require "eike.lsp.null-ls"
-require "lsp_signature".setup({})
+require "eike.lsp.lsp-signature"
 
 vim.cmd[[autocmd BufWritePre *.go lua vim.lsp.buf.formatting()]]
