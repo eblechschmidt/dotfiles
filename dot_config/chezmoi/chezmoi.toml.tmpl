@@ -3,7 +3,10 @@
 
 [keepassxc]
     database = "/Users/eike/Gemeinsam/Passworte/pwdDataBase.kdbx"
-{{ if eq .chezmoi.os "darwin" }}
 [cd]
+{{ if eq .chezmoi.os "darwin" }}
     command = "/usr/local/bin/bash"
+{{ end }}
+{{ if eq .chezmoi.os "windows" }}
+    command = "C:\\Program Files\\Git\\usr\\bin\\bash"
 {{ end }}
