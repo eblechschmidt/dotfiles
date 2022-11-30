@@ -1,0 +1,4 @@
+export CDPATH=".:$HOME/repos:$HOME"
+{{ if eq .chezmoi.os "windows" }}
+export CDPATH="$CDPATH:$HOME/repos/matlab"
+{{ end }}
