@@ -36,7 +36,7 @@ local options = {
 }
 
 vim.opt.shortmess:append "c"
-vim.cmd [[ colorscheme nord]]
+vim.cmd [[silent! colorscheme nord]]
 
 for k, v in pairs(options) do
   vim.opt[k] = v
