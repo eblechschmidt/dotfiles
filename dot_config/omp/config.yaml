@@ -3,7 +3,7 @@ $schema: https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes
 blocks:
     - alignment: left
       segments:
-        - background: 'yellow'
+        - background: 'cyan'
           foreground: 'black'
           properties:
             branch_icon: ""
