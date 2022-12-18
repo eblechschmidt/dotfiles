@@ -8,6 +8,8 @@ require("eike.lsp.handlers").setup()
 require "eike.lsp.null-ls"
 require "eike.lsp.lsp-signature"
 
+vim.lsp.handlers["textDocument/references"] = require("telescope.builtin").lsp_references
+
 -- auto import for go
 vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = { "*.go" },
