@@ -36,7 +36,8 @@ local options = {
 }
 
 vim.opt.shortmess:append "c"
-vim.cmd [[silent! colorscheme nord]]
+vim.o.background = "dark" -- or "light" for light mode
+vim.cmd [[silent! colorscheme gruvbox]]
 
 for k, v in pairs(options) do
   vim.opt[k] = v

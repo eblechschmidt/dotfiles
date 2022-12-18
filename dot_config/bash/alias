@@ -36,7 +36,7 @@ alias :wq="exit"
 alias ap="ansible-playbook -K"
 
 # bat
-alias bat="bat --theme=Nord"
+alias bat="bat --theme=gruvbox-dark"
 
 # mpv
 alias  mpv="mpv --ytdl-format=\"bestvideo[height<=?1080][fps<=?30]+bestaudio/best\" -fs --hwdec=auto --hwdec-codecs=all --override-display-fps=25";
