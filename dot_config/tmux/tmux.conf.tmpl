@@ -8,7 +8,9 @@ set -ag terminal-overrides ",screen-256color:RGB"
 
 # manual tmux settings must be set befor loading the theme
 set-option -g status-position top
-# loading temux nord theme
+
+# enable mouse scrolling
+set -g mouse on        #For tmux version 2.1 and up
 
 ## COLORSCHEME: gruvbox dark (medium)
 set-option -g status "on"
