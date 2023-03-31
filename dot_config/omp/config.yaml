@@ -3,8 +3,8 @@ $schema: https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes
 blocks:
     - alignment: left
       segments:
-        - background: '#4c566a'
-          foreground: 'white'
+        - background: 'cyan'
+          foreground: 'black'
           properties:
             branch_icon: ""
             fetch_upstream_icon: true
@@ -25,11 +25,11 @@ blocks:
             - "{{ if or (.Working.Changed) (.Staging.Changed) }}red{{ end }}"
             - "{{ if or (gt .Behind 0) (gt .Ahead 0)}}yellow{{ end }}"
           foreground_templates:
-            - "{{ if or (.Working.Changed) (.Staging.Changed) }}white{{ end }}"
+            - "{{ if or (.Working.Changed) (.Staging.Changed) }}black{{ end }}"
           template: " {{ .HEAD }} "
           type: git
         - background: 'blue'
-          foreground: '#e5e9f0'
+          foreground: 'black'
           properties:
             style: agnoster_full 
           style: powerline 
