@@ -82,7 +82,9 @@ window:
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
+{{if eq .chezmoi.os "darwin"}}
   startup_mode: Fullscreen
+{{end}}
 
   # Window title
   #title: Alacritty
@@ -458,8 +460,6 @@ shell:
 {{else}}
 shell:
   program: C:\Users\bleeik\AppData\Local\Programs\Git\usr\bin\bash.exe 
-  args:
-    - --cd-to-home
 {{end}}
 
 # Startup directory
