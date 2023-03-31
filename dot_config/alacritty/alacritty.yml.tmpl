@@ -432,23 +432,18 @@ import:
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-{{if eq .chezmoi.hostname "ID6838"}}
-shell:
-  program: C:\Users\bleeik\AppData\Local\Programs\Git\usr\bin\bash.exe 
-  args:
-    - --cd-to-home
-{{else if eq .chezmoi.hostname "ID6088"}}
-shell:
-  program: C:\Users\bleeik\AppData\Local\Programs\Git\usr\bin\bash.exe 
-  args:
-    - --cd-to-home
-{{else}}
+{{if eq .chezmoi.os "darwin"}}
 shell:
   program: /usr/local/bin/bash
   args:
     - --login
     - -c
     - "tmux attach || tmux"
+{{else}}
+shell:
+  program: C:\Users\bleeik\AppData\Local\Programs\Git\usr\bin\bash.exe 
+  args:
+    - --cd-to-home
 {{end}}
 
 # Startup directory
