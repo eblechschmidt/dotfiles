@@ -1,6 +1,6 @@
 # vi/vim/nvim
-alias vi="nvim"
-alias vim="nvim"
+alias vi="hx"
+alias vim="hx"
 
 # mkdir
 alias mkdir="mkdir -p"
