@@ -4,9 +4,17 @@ theme = "gruvbox"
 line-number = "relative"
 mouse = false
 bufferline = "multiple"
+rulers = [80]
+
+[editor.lsp]
+display-inlay-hints = true
 
 [editor.cursor-shape]
 insert = "bar"
+
+[editor.indent-guides]
+render = true
+
 
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
