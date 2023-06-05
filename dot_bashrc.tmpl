@@ -1,5 +1,8 @@
 set -o vi
 
+# add paths
+export PATH=$PATH:~/go/bin
+
 # local utility functions 
 _have()      { type "$1" &>/dev/null; }
 _source_if() { [[ -r "$1" ]] && source "$1"; }
