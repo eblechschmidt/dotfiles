@@ -474,8 +474,11 @@ shell:
 #working_directory: None
 
 # Send ESC (\x1b) before characters when alt is pressed.
+{{if eq .chezmoi.os "darwin"}}
   alt_send_esc: false 
-
+{{else}}
+  alt_send_esc: false 
+{{end}}
 # Offer IPC using `alacritty msg` (unix only)
 #ipc_socket: true
 
