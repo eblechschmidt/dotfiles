@@ -19,11 +19,11 @@ alias cmr="chezmoi re-add"
 alias cmcd="chezmoi cd"
 
 # ls or exa
-if _have exa; then
-  alias ls="exa --color=always --group-directories-first --icons"
-  alias la="exa -a --color=always --group-directories-first --icons"
-  alias ll="exa -lah --color=always --group-directories-first --icons"
-  alias lt='exa -aT --color=always --group-directories-first --icons'
+if _have eza; then
+  alias ls="eza --color=always --group-directories-first --icons"
+  alias la="eza -a --color=always --group-directories-first --icons"
+  alias ll="eza -lah --color=always --group-directories-first --icons"
+  alias lt='eza -aT --color=always --group-directories-first --icons'
 else
   alias ls="ls --color=auto"
   alias la="ls -A"
