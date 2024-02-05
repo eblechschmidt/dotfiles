@@ -1,7 +1,9 @@
 import = ["/Users/eike/.config/alacritty/gruvbox_dark.toml"]
-
+{{ if eq .chezmoi.hostname "MacBook-Air-von-Anne"}}
+shell = {program = "/opt/homebrew/bin/bash", args = ["--login", "-c", "tmux attach || tmux"]}
+{{else}}
 shell = {program = "/usr/local/bin/bash", args = ["--login", "-c", "tmux attach || tmux"]}
-
+{{end}}
 [env]
 TERM = "screen-256color"
 
