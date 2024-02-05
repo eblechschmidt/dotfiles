@@ -2,7 +2,10 @@ set -o vi
 
 # add paths
 export PATH=$PATH:~/go/bin
-
+{{ if and (eq .chezmoi.os "darwin") (eq .chezmoi.arch "arm64")}}
+export PATH=/opt/homebrew/bin:$PATH
+export PATH=/opt/homebrew/sbin:$PATH
+{{end}}
 # local utility functions 
 _have()      { type "$1" &>/dev/null; }
 _source_if() { [[ -r "$1" ]] && source "$1"; }
