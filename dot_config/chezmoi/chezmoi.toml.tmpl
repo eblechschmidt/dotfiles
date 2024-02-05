@@ -5,7 +5,11 @@
     database = "/Users/eike/Gemeinsam/Passworte/pwdDataBase.kdbx"
 [cd]
 {{ if eq .chezmoi.os "darwin" }}
+  {{if eq .chezmoi.hostname "MacBook-Air-von-Anne"}}
+    command = "/opt/homebrew/bin/bash"
+  {{else}}
     command = "/usr/local/bin/bash"
+  {{end}}
 {{ end }}
 {{ if eq .chezmoi.os "windows" }}
     command = "C:\\Program Files\\Git\\usr\\bin\\bash"
