@@ -1,5 +1,9 @@
 {{ if eq .chezmoi.os "darwin" }}
+{{ if eq .chezmoi.hostname "MacBook-Air-von-Anne"}}
+set -g default-shell /opt/homebrew/bin/bash
+{{else}}
 set -g default-shell /usr/local/bin/bash
+{{end}}
 {{end}}
 
 # to prevent esc delay in helix
